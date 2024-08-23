@@ -1,0 +1,25 @@
+{
+  "name": "extract-photo-date",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "extract-photo-date": "bin/extract-photo-date.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dateformat": "^5.0.3",
+    "fast-exif": "^1.0.1",
+    "fs-extra": "^11.1.0",
+    "glob": "^8.1.0",
+    "promise-serial-exec": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  }
+}
