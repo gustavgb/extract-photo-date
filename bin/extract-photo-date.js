@@ -17,10 +17,10 @@ async function extractImageDate (filePath) {
   let date = ''
 
   if (exifData && exifData.exif && exifData.exif.DateTimeOriginal) {
-    date = dateFormat(exifData.exif.DateTimeOriginal, 'yymmdd')
+    date = dateFormat(exifData.exif.DateTimeOriginal, 'UTC:yymmddHHMM')
   } else {
     const { mtime } = await fs.stat(filePath)
-    date = dateFormat(mtime, 'yymmdd')
+    date = dateFormat(mtime, 'UTC:yymmddHHMM')
   }
 
   if (date) {
