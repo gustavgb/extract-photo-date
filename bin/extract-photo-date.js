@@ -10,7 +10,7 @@ import process from 'process'
 
 const inputDirectory = process.cwd()
 const outputDirectory = path.join(inputDirectory, 'output')
-const inputFiles = glob.sync(inputDirectory + '/*.{jpeg,jpg}', { maxDepth: 1 })
+const inputFiles = glob.sync(inputDirectory + '/*.{jpeg,jpg,JPG,JPEG}', { maxDepth: 1 })
 
 async function extractImageDate (filePath) {
   const exifData = await exif.read(filePath)
